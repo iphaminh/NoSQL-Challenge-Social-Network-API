@@ -1,9 +1,9 @@
 // Defining the schema for a Reaction
 const ReactionSchema = new Schema({
     // reactionId will store a unique identifier for the reaction
-    reactionId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId()
+    reactionId: { //just a name
+      type: Schema.Types.ObjectId, //now it has id as object
+      default: () => new Types.ObjectId() //new reaction >>> new object id
     },
     // reactionBody field is required, of type String, and has a maximum length of 280 characters
     reactionBody: {
