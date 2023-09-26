@@ -28,11 +28,11 @@ const thoughtController = {
   },
 
   // create thought
-  createThought({ params, body }, res) {
+  createThought({ body }, res) { // Notice that we are only destructuring body from the request
     Thought.create(body)
       .then(({ _id }) => { //After the thought is created, we get its _id
         return User.findOneAndUpdate(  //find user
-          { _id: params.userId }, //creating an object that Mongoose uses to query the database bnelow
+        { _id: body.userId }, // Use body.userId instead of params.userId
           { $push: { thoughts: _id } }, //add thoughts id to its userid
           { new: true }
         );
