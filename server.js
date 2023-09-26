@@ -18,10 +18,10 @@ app.use('/api/thought-routes', thoughtRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
-  useFindAndModify: false,
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
+
 
 // Start the server
 app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));

@@ -1,3 +1,4 @@
+const { Schema } = require('mongoose');
 // Defining the schema for a Reaction
 const ReactionSchema = new Schema({
     // reactionId will store a unique identifier for the reaction
@@ -24,6 +25,7 @@ const ReactionSchema = new Schema({
     }
   });
   
+  module.exports = ReactionSchema;
 // how it look like in database on original thought and reaction
 
   //{"_id": "60d5ec49a9c1a2432347643a",

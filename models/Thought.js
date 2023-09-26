@@ -1,5 +1,6 @@
 // Importing necessary modules from mongoose
 const { Schema, model } = require('mongoose');
+const ReactionSchema = require('./Reaction');
 
 // schema for a Thought
 const ThoughtSchema = new Schema({
