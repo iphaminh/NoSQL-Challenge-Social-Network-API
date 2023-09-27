@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 // Defining the schema for a Reaction
 const ReactionSchema = new Schema({
     // reactionId will store a unique identifier for the reaction
